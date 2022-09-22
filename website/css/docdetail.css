@@ -688,7 +688,6 @@ li {
     position: absolute;
     top:-80px;
     left: -30px;
-    display: block;
     transform: scale(0);
     transition: all 0.5s;
 }
