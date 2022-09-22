@@ -1,23 +1,22 @@
 # docs-debug
 
 #### 介绍
-The repository of docs-debug template
 
-#### 软件架构
-软件架构说明
+本仓库提供了 openeuler 的文档捉虫代码，可用于文档的捉虫功能的展示。
 
+#### 目录结构
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+website
+├─ css // 页面的 css 文件
+├─ img // 页面的图片文件
+├─ js // 页面的 js 文件
+├─ index.html // 页面
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  clone 仓库代码
+2.  找到 website 路径下的 index.html
+3.  双击找到的 index.html 即可在浏览器中打开，查看展示效果
 
 #### 参与贡献
 
@@ -25,13 +24,3 @@ The repository of docs-debug template
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
