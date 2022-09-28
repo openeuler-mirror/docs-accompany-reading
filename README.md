@@ -8,12 +8,13 @@
 2. 创建Gitee Issue，PR链接的自动跳转。
 
 #### 目录结构
-
+```
 website
 ├─ css // 页面的 css 文件
 ├─ img // 页面的图片文件
 ├─ js // 页面的 js 文件
 ├─ index.html // 页面
+```
 
 #### 使用说明
 
