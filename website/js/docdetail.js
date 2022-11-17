@@ -54,18 +54,18 @@ $(function ($) {
     const first="法律声明"
     if (!questionValue) {
       $(".first-input").focus();
-      tipShow("请输入“有虫”片段", 0);
+      inputErrorTip("请输入“有虫”片段", 0);
     } else if (!feedback || !submitType) {
       $(".issue-reason").focus();
-      tipShow("请选择提交类型并输入问题描述", 1);
+      inputErrorTip("请选择提交类型并输入问题描述", 1);
     } else if (!email) {
-      tipShow("请输入您的邮箱", 3);
+      inputErrorTip("请输入您的邮箱", 3);
     } else if (!reg.test(email)) {
-      tipShow("请输入正确的邮箱", 3);
+      inputErrorTip("请输入正确的邮箱", 3);
     } else if (satisfaction.length === 0) {
-      tipShow("请选择满意度", 2);
+      inputErrorTip("请选择满意度", 2);
     } else if (privacy.length === 0) {
-      tipShow("请勾选同意隐私声明", 5);
+      inputErrorTip("请勾选同意隐私声明", 5);
     } else {
       let postData = {
         bugDocFragment: questionValue,
@@ -77,12 +77,16 @@ $(function ($) {
       };
       postData.link = window.location.href;
       let body = encodeURIComponent(issueTemplate(postData));
+      // 在正式使用捉虫时，此处可根据实际需要确定是否用一个后端接口来接收用户的捉虫数据,便于后续查询使用
+      // 如果用接口接收,那么可在接口返回200之后再进行跳转
       try {
         if (submitType === "issue") {
+          // 此处为提交issue打开的地址，该地址应为用到的捉虫功能的网站的代码仓的地址，此处使用openEuler的文档代码仓地址作为演示
           window.open(
             `https://gitee.com/openeuler/docs/issues/new?issue%5Bassignee_id%5D=0&issue%5Bmilestone_id%5D=0&title=有奖捉虫&description=${body}`
           );
         } else {
+          // 此处为提交PR打开的地址，该地址应为用到的捉虫功能的网站的代码仓的地址，此处使用openEuler的文档代码仓地址作为演示
           window.open(
             `https://gitee.com/-/ide/project/openeuler/docs/edit/stable2-22.03_LTS/-/docs/zh/docs/Releasenotes/法律声明.md?search=${first}&title=文档捉虫-openEuler 22.03_LTS-法律声明&description=${feedback}&message=${feedback}&label_names=文档捉虫`
           );
@@ -189,7 +193,7 @@ $(function ($) {
   });
 });
 
-function tipShow(value, index) {
+function inputErrorTip(value, index) {
   if (index === 5) {
     $(".privacy-box").addClass("shake1");
     setTimeout(function () {
