@@ -1,0 +1,53 @@
+$themes: (light: ( //字体
+        font_color1: #000,
+        font_color2: #002FA7,
+        font_color3:#555555,
+        font_color4:#002FA7,
+        font_color5:rgba(0,0,0,1),
+
+        //背景
+        background_color1: #fff,
+        background_color2: #f5f7fb,
+        background_color3: #002FA7,
+        background_color4: #fff,
+        background_color5: #000, //小圆点
+        background_color6: #002FA7,
+        background_color7: #e2e2e2,
+        background_color8: rgba(0, 0, 0, 0.05),//hover背景色
+        background_color9: #002FA7,
+
+        //边框
+        border_color1: #3d414a,
+        border_color2:#002fa7,
+        //阴影
+        shadow_color1:#BEC4CC33,
+
+    ),
+
+    dark: ( //字体
+        font_color1: white,
+        font_color2: #FEB32A,
+        font_color3:#E2E2E2,
+        font_color4:#FEB32A,
+        font_color5:rgba(0,0,0,0.45),
+
+        //背景
+        background_color1: rgb(30,30,30),
+        background_color2: rgb(18,18,18),
+        background_color3: rgb(30,30,30),
+        background_color4: #002FA7,
+        background_color5: #fff, //小圆点
+        background_color6: #406FE7FF,
+        background_color7: #87b9ff,
+        background_color8: #000,
+        background_color9: #FEB32A,
+
+        //边框
+        border_color1: #3d414a,
+        border_color2:#406FE7FF ,
+        //阴影
+        shadow_color1:#0D1520FF,
+
+
+    ));
+
