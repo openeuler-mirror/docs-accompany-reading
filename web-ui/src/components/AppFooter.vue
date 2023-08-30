@@ -1,56 +1,35 @@
 <script setup lang="ts">
 import AppContent from '@/components/AppContent.vue';
 
-import LogoFooter from '@/assets/footer/footer-logo2.png';
-import LogoFooter1 from '@/assets/footer/footer-logo1.png';
-import LogoAtom from '@/assets/footer/atom-logo.svg';
-import FooterBg from '@/assets/footer/footer-bg.png';
-import FooterBgMo from '@/assets/footer/footer-bg-mo.png';
-
-// 中文友情链接
-import LogoBilibili from '@/assets/footer/bilibili.png';
-import LogoInfoq from '@/assets/footer/infoq.png';
-import LogoJuejin from '@/assets/footer/juejin.png';
-import LogoOschina from '@/assets/footer/oschina.png';
-import LogoCsdn from '@/assets/footer/csdn.png';
-import Logo51cto from '@/assets/footer/51cto.png';
-
-// 公众号、小助手
-import CodeTitleXzs from '@/assets/footer/img-xzs.png';
-import CodeTitleGzh from '@/assets/footer/img-gzh.png';
-import CodeImgXzs from '@/assets/footer/code-xzs.png';
-import CodeImgZgz from '@/assets/footer/code-zgz.png';
-
-// 友情链接
 const linksData = [
   {
     path: 'https://my.oschina.net/openeuler',
-    logo: LogoOschina,
+    logo: 'oschina.png',
     id: 'oschina',
   },
   {
     path: 'https://blog.csdn.net/openEuler_?spm=1000.2115.3001.5343',
-    logo: LogoCsdn,
+    logo: 'csdn.png',
     id: 'csdn',
   },
   {
     path: 'https://juejin.cn/user/3183782863845454',
-    logo: LogoJuejin,
+    logo: 'juejin.png',
     id: 'juejin',
   },
   {
     path: 'https://space.bilibili.com/527064077/channel/series',
-    logo: LogoBilibili,
+    logo: 'bilibili.png',
     id: 'bilibili',
   },
   {
     path: 'https://www.infoq.cn/profile/6E6CE3E2316F28/publish',
-    logo: LogoInfoq,
+    logo: 'infoq.png',
     id: 'infoq',
   },
   {
     path: 'https://blog.51cto.com/u_14948868',
-    logo: Logo51cto,
+    logo: '51cto.png',
     id: '51cto',
   },
 ];
@@ -78,27 +57,23 @@ const linksData2 = [
 // 公众号、小助手
 const footerCodeList = [
   {
-    img: CodeTitleXzs,
-    code: CodeImgXzs,
+    img: 'img-xzs.png',
+    code: 'code-xzs.png',
     label: '',
   },
   {
-    img: CodeTitleGzh,
-    code: CodeImgZgz,
+    img: 'img-gzh.png',
+    code: 'code-zgz.png',
     label: '',
   },
 ];
-
+function getImageUrl(name: string) {
+  return new URL(`../assets/footer/${name}`, import.meta.url).href;
+}
 const handleNavClick = (path: string) => {
   if (path.startsWith('https:')) {
     window.open(path, '_blank');
   }
-};
-
-// 背景
-const footBg = {
-  pc: `url(${FooterBg})`,
-  mo: `url(${FooterBgMo})`,
 };
 </script>
 
@@ -107,9 +82,16 @@ const footBg = {
     <!-- 隐私政策 -->
     <AppContent :pc-top="0" :mobile-top="0">
       <div class="atom">
-        <p class="atom-text">openEuler 是由开放原子开源基金会（OpenAtom Foundation）孵化及运营的开源项目</p>
-        <a href="https://openatom.cn/home" target="_blank">
-          <img :src="LogoAtom" class="atom-logo" alt="" />
+        <p class="atom-text">
+          openEuler 是由开放原子开源基金会（OpenAtom
+          Foundation）孵化及运营的开源项目
+        </p>
+        <a href="https://openatom.cn" target="_blank">
+          <img
+            src="/src/assets/footer/atom-logo.svg"
+            class="atom-logo"
+            alt=""
+          />
         </a>
       </div>
     </AppContent>
@@ -117,8 +99,16 @@ const footBg = {
       <AppContent :pc-top="0" :mobile-top="0">
         <div class="inner">
           <div class="footer-logo">
-            <img class="show-pc" :src="LogoFooter" alt="" />
-            <img class="show-mo" :src="LogoFooter1" alt="" />
+            <img
+              class="show-pc"
+              src="/src/assets/footer/footer-logo2.png"
+              alt=""
+            />
+            <img
+              class="show-mo"
+              src="/src/assets/footer/footer-logo1.png"
+              alt=""
+            />
             <p>
               <a
                 class="email"
@@ -154,9 +144,9 @@ const footBg = {
                 class="code-pop"
                 href="javascript:;"
               >
-                <img :src="item.img" class="code-img" alt="" />
+                <img :src="getImageUrl(item.img)" class="code-img" alt="" />
                 <div class="code-layer">
-                  <img :src="item.code" alt="" />
+                  <img :src="getImageUrl(item.code)" alt="" />
                   <p class="txt">{{ item.label }}</p>
                 </div>
               </a>
@@ -169,7 +159,7 @@ const footBg = {
                 class="links-logo"
                 target="_blank"
               >
-                <img :src="item.logo" alt="" />
+                <img :src="getImageUrl(item.logo)" alt="" />
               </a>
             </div>
           </div>
@@ -270,9 +260,9 @@ $color: #fff;
   }
 
   &-content {
-    background: v-bind('footBg.pc') no-repeat bottom center;
+    background: url(../assets/footer/footer-bg.png) no-repeat bottom center;
     @media (max-width: 767px) {
-      background: v-bind('footBg.mo') no-repeat bottom center;
+      background: url(../assets/footer/footer-bg-mo.png) no-repeat bottom center;
     }
     .inner {
       display: flex;
