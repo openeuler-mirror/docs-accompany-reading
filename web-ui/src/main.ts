@@ -1,6 +1,7 @@
 import 'virtual:svg-icons-register';
 import '@/shared/styles/base.scss';
 import '@/shared/styles/mixin.scss';
+import '@/shared/styles/var.scss';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import App from './App.vue';
