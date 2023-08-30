@@ -38,8 +38,8 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
-        target: 'https://dsapi.osinfra.cn',
+      '/api/': {
+        target: 'https://dsapi.osinfra.cn/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
