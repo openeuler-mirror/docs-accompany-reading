@@ -6,7 +6,7 @@ import type { AxiosStatic } from 'axios';
  */
 export default (axios: AxiosStatic, config = {}) => {
   const defaultConfig = {
-    baseURL: '/api',
+    baseURL: '',
     timeout: 20000,
     headers: {
       'Content-Type': 'application/json;charset=UTF-8',

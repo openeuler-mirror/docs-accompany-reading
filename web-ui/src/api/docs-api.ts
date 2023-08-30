@@ -7,7 +7,7 @@ interface rankParams {
 }
 
 export function getRank(rankParams: rankParams) {
-  const url = '/query/issueScore';
+  const url = '/api/query/issueScore';
   return request
     .get(url, {
       params: {
