@@ -42,26 +42,7 @@ interface params {
   end: string;
 }
 
-const bland = [
-  {},
-  {},
-  {
-    nameList: ['gomico', 'lu4nx', 'jintangHeima'],
-  },
-  {
-    nameList: ['saarloos', 'limec', 'beanhero'],
-  },
-  {
-    nameList: ['gjunming', 'stone1116', 'wenzuoshuai'],
-  },
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-];
+const bland = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
 // 图片动态路径处理
 
 function getImageUrl(name: string) {
@@ -77,12 +58,6 @@ function showRank(params: params) {
         info.sort((a, b) => {
           return b.issue_score - a.issue_score;
         });
-        // let newArr =  [info[0]]
-        // for (let i:number = 1; i< info.length;i++) {
-        //   if (info[i].issue_score!==info[i - 1].issue_score) {
-        //     newArr.push(info[i])
-        //   }
-        // }
         // 3-10人 10%取第一名 10%-30% 取剩余；小于3人 按10%的徽章颁发，其余奖章不发
         info.forEach((item, index) => {
           item['giteeRoom'] = `https://gitee.com/${item.issue_author}`;
@@ -107,10 +82,7 @@ function showRank(params: params) {
             info.length >= 10 &&
             valueQuarter.value !== rank.quarterList[0]
           ) {
-            // 季度奖项
-            // let percentage =
-            //   Math.round(((index + 1) / info.length) * 10000) / 100.0;
-            // percentage <= 10 ? (item['badge'] = 'prize-5.png') : '';
+          
           }
         });
         // 相同分数并列获奖
