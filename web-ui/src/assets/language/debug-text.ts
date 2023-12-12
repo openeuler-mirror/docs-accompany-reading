@@ -8,7 +8,7 @@ export const introduction = {
   paragraph: [
     '各位开发者朋友们，大家好呀～',
     'openEuler 文档捉虫活动由 openEuler 社区主办，旨在了解文档开发者的真实场景，不断改进和完善文档，从而帮助开发者更好地使用 openEuler 操作系统和相关软件。在这里，不仅仅是技术问题，一个错别字、一个错误标点的修正都会得到肯定，所以这里也是新手们参与开源贡献的入门小天地，我们欢迎每一个小伙伴的参与。',
-    '在这里，您可以阅读文档，了解 openEuler 操作系统、下一代虚拟化平台 StratoVirt、智能化系统性能优化引擎 A-Tune、统一机密计算编程框架 secGear 等技术知识，也可以参考文档对其进行安装使用。您的每一个 issue、每一个 PR 贡献，都将被广大的开发者们看到并从中收益。',
+    '在这里，您可以阅读文档，了解 openEuler 操作系统、下一代虚拟化平台 StratoVirt、智能化系统性能优化引擎 A-Tune、统一机密计算编程框架 secGear 等技术知识，也可以参考文档对其进行安装使用。您的每一个 issue、每一个 PR 贡献，都将被广大的开发者们看到并从中受益。',
     '所以，赶紧参与吧，开启您的“openEuler 文档捉虫”之旅！',
   ],
 };
@@ -17,19 +17,19 @@ export const howToJoin = {
   stepOneTitle: '找bug,提Issue',
   stepFirst: ['1.打开', 'openEuler官方文档', '阅读自己感兴趣的文档。'],
   stepOneText: [
-    '2. 选中存在问题的文档片段，单击出现的图标，在弹出窗口中填写相关信息 。',
-    '3.	单击“创Issue赢奖品”按钮，拷贝内容并跳转到 Gitee openEuler doc 仓库 issue 提交页面 。',
-    '4.	登录 Gitee，粘贴复制的内容，完成 issue 创建 。',
+    '2. 选中存在问题的文档片段，单击出现的图标，在弹出窗口中填写相关信息。',
+    '3.	单击“提交”按钮，登录 Gitee，跳转到 Gitee openEuler docs 仓库 issue 提交页面。',
+    '4.	选择 issue 类型，单击“创建”按钮，完成 issue 创建。',
   ],
   stepTowTitle: '提PR，解bug',
   stepTowText: [
-    '1.	确定需要解决的问题，需要有对应 issue。',
+    '1.	确定需要解决的问题。',
     '2.	Fork openEuler doc 仓并修改问题 。',
     '3.	提交 PR 。',
   ],
   range: {
     title: '本期捉虫范围:',
-    location: 'openEuler官方文档社区文档',
+    location: 'openEuler官方社区文档',
     link: 'https://docs.openeuler.org/zh/',
   },
 };
