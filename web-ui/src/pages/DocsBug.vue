@@ -42,7 +42,6 @@ interface params {
   end: string;
 }
 
-const bland = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
 // 图片动态路径处理
 
 function getImageUrl(name: string) {
@@ -82,7 +81,6 @@ function showRank(params: params) {
             info.length >= 10 &&
             valueQuarter.value !== rank.quarterList[0]
           ) {
-          
           }
         });
         // 相同分数并列获奖
@@ -446,20 +444,10 @@ onUnmounted(() => {
         <div class="bland">
           <div class="title">{{ value }}{{ rank.blandTitle }}</div>
           <div class="bland-box">
-            <div
-              v-for="item in bland[Number(value.slice(0, -1)) - 1].nameList ||
-              3"
-              :key="item"
-              class="bland-item"
-            >
+            <div v-for="item in 3" :key="item" class="bland-item">
               <img src="/src/assets/docs-bug/prize-4.png" />
-              <a
-                v-if="typeof item === 'string'"
-                :href="`https://gitee.com/${item}`"
-                target="_blank"
-                >{{ item }}</a
-              >
-              <span v-else>敬请期待</span>
+
+              <span>敬请期待</span>
             </div>
           </div>
         </div>
