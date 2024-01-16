@@ -125,9 +125,8 @@ function showRank(params: params) {
       }
       loadingInstance.close();
     })
-    .catch((err) => {
+    .catch(() => {
       loadingInstance.close();
-      console.log(err);
     });
 }
 
@@ -163,18 +162,22 @@ function scrollTop() {
   }
 }
 
+const getCurrentQuarter = () => {
+  const date = new Date();
+  const month = date.getMonth();
+  const quarter = Math.floor(month / 3) + 1; // 计算当前季度
+  return quarter;
+};
+
 function rankChange(index: number) {
   isExent.value = false;
   rankTab.value = index;
   index === 0
     ? selectChange(currentDate.getMonth() + 1, index)
-    : selectChange(1, index);
+    : selectChange(getCurrentQuarter() - 1, index);
   value.value = rank.monthList[currentDate.getMonth()];
-  valueQuarter.value = rank.quarterList[1];
-}
-
-function tabChange(index: number) {
-  switchTab.value = index;
+  const [firstQuarter] = rank.quarterList;
+  valueQuarter.value = firstQuarter;
 }
 
 // 获取日期天数
@@ -343,17 +346,6 @@ onUnmounted(() => {
       </div>
       <div id="prize" class="prize do-jump">
         <div class="title">{{ prize.title }}</div>
-        <div class="tabber">
-          <div
-            v-for="(item, index) in prize.prizeData"
-            :key="item.tabTitle"
-            class="monthly"
-            :class="{ tabActive: index === switchTab }"
-            @click="tabChange(index)"
-          >
-            {{ item.tabTitle }}
-          </div>
-        </div>
         <div class="prize-box">
           <div
             v-for="item in prize.prizeData[switchTab].renderData"
@@ -439,16 +431,6 @@ onUnmounted(() => {
           <div v-show="isExent" class="look-detail">
             {{ rank.putAway }}
             <SvgIcon class="icon-extend put-away" name="extend"></SvgIcon>
-          </div>
-        </div>
-        <div class="bland">
-          <div class="title">{{ value }}{{ rank.blandTitle }}</div>
-          <div class="bland-box">
-            <div v-for="item in 3" :key="item" class="bland-item">
-              <img src="/src/assets/docs-bug/prize-4.png" />
-
-              <span>敬请期待</span>
-            </div>
           </div>
         </div>
       </div>

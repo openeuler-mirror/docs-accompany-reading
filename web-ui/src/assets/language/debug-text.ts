@@ -1,5 +1,5 @@
 export const bannerLabels = {
-  title: [{ id: 'first', text: 'openEuler文档有奖捉虫' }],
+  title: [{ id: 'first', text: 'openEuler文档捉虫' }],
   description: '捉虫大战，震撼来袭，就等你来',
   more: '了解更多',
 };
@@ -8,7 +8,7 @@ export const introduction = {
   paragraph: [
     '各位开发者朋友们，大家好呀～',
     'openEuler 文档捉虫活动由 openEuler 社区主办，旨在了解文档开发者的真实场景，不断改进和完善文档，从而帮助开发者更好地使用 openEuler 操作系统和相关软件。在这里，不仅仅是技术问题，一个错别字、一个错误标点的修正都会得到肯定，所以这里也是新手们参与开源贡献的入门小天地，我们欢迎每一个小伙伴的参与。',
-    '在这里，您可以阅读文档，了解 openEuler 操作系统、下一代虚拟化平台 StratoVirt、智能化系统性能优化引擎 A-Tune、统一机密计算编程框架 secGear 等技术知识，也可以参考文档对其进行安装使用。您的每一个 issue、每一个 PR 贡献，都将被广大的开发者们看到并从中受益。',
+    '在这里，您可以阅读文档，了解 openEuler 操作系统、下一代虚拟化平台 StratoVirt、智能化系统性能优化引擎 A-Tune、统一机密计算编程框架 secGear 等技术知识，也可以参考文档对其进行安装使用。您的每一个 issue、每一个 PR 贡献，都将被广大的开发者们看到并从中受益。本次活动的 Top 积分者将有机会被选为“openEuler 社区年度优秀贡献者”。',
     '所以，赶紧参与吧，开启您的“openEuler 文档捉虫”之旅！',
   ],
 };
@@ -39,8 +39,8 @@ export const rule = {
   explain: '说明：',
   explainList: [
     '针对有效 PR 或 issue，主办方会进行相关评论',
-    '月度评奖，仅计算当月积分，积分月底清零，但在季度评奖中体现',
-    '仅设置了“资料捉虫活动”标签且得到主办方评论有效的 issue 和具备有效 issue 号的 PR 积分',
+    '月度评选，仅计算当月积分，积分月底清零，但在季度评选中体现',
+    '仅设置了“文档捉虫”标签且得到主办方评论有效的 issue 和具备有效 issue 号的 PR 积分',
     '同一个问题，最早提交者积分',
     '不同分支的同一个问题，仅一个分支标准积分，其他每个分支每个 issue / PR +1 分',
   ],
@@ -98,36 +98,27 @@ export const rule = {
   ],
 };
 export const prize = {
-  title: '奖项设置',
+  title: '徽章设置',
   tabTitle: ['月度', '季度'],
   prizeData: [
     {
-      tabTitle: '月度',
+      tabTitle: '',
       renderData: [
         {
           imgPath: 'prize-1.png',
-          text: '特殊贡献奖（经评审对文档改进有重大贡献），该奖项不定期开启，获得虚拟徽章及相应奖品。',
+          text: '特殊贡献徽章（经 doc SIG 评选对文档改进有重大贡献），该评选不定期开启，贡献者可获得该虚拟认证徽章',
         },
         {
           imgPath: 'prize-2.png',
-          text: '积分前 10% 获得“星耀奖”，获得认证徽章及相应奖品。',
+          text: '本月积分前 10% 的贡献者可获得“星耀”徽章',
         },
         {
           imgPath: 'prize-3.png',
-          text: '积分前 10% - 30% 获得“攀登奖”，获得认证徽章及相应奖品。',
+          text: '本月积分前 10% - 30% 的贡献者可获得“荣耀”徽章',
         },
-        {
-          imgPath: 'prize-4.png',
-          text: '3 名“幸运盲盒奖”：所有提交有效 issue 或者 PR 的小伙伴，均可参与抽奖，每月抽取 3 名开源幸运奖，获得相应奖品。',
-        },
-      ],
-    },
-    {
-      tabTitle: '季度',
-      renderData: [
         {
           imgPath: 'prize-5.png',
-          text: '积分前 Top 10 获得“问鼎奖”，获得认证徽章及相应奖品。',
+          text: '本季度积分前 10% 的贡献者可获得“问鼎”徽章',
         },
       ],
     },
@@ -183,7 +174,7 @@ export const navList = [
   },
   {
     key: '#prize',
-    name: '奖项设置',
+    name: '徽章设置',
   },
   {
     key: '#rank',
