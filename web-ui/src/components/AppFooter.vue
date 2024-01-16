@@ -130,7 +130,7 @@ const handleNavClick = (path: string) => {
                 >{{ link.NAME }}</a
               >
             </div>
-            <p class="copyright">版权所有 © 2023 openEuler 保留一切权利</p>
+            <p class="copyright">版权所有 © 2024 openEuler 保留一切权利</p>
             <p class="license">
               <span>遵循</span>
               木兰宽松许可证第2版（MulanPSL2）
